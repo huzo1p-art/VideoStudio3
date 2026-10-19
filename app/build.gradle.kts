@@ -10,8 +10,8 @@ android {
         applicationId = "com.example.videostudio"
         minSdk = 24
         targetSdk = 34
-        versionCode = 2
-        versionName = "2.0"
+        versionCode = 3
+        versionName = "3.0"
     }
     splits {
         abi {
@@ -35,5 +35,6 @@ android {
 }
 
 dependencies {
-    implementation("com.arthenica:ffmpeg-kit-full-gpl:5.1.LTS")
+    implementation("androidx.media3:media3-transformer:1.2.1")
+    implementation("androidx.media3:media3-common:1.2.1")
 }
