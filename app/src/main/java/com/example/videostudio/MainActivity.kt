@@ -35,4 +35,4 @@ android {
 }
 
 dependencies {
-    implementation("com.arthenica:ffmpeg-kit-full-gpl:6.0-2.LTS")
+    implementation("com.arthenica:ffmpeg-kit-full-gpl:5.1.LTS")
