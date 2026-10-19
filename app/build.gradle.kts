@@ -13,6 +13,13 @@ android {
         versionCode = 2
         versionName = "2.0"
     }
+    splits {
+        abi {
+            isEnable = true
+            reset()
+            include("arm64-v8a")
+        }
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -29,3 +36,4 @@ android {
 
 dependencies {
     implementation("com.arthenica:ffmpeg-kit-full-gpl:6.0-2")
+}
