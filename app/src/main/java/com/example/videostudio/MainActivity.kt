@@ -8,7 +8,6 @@ import android.view.Gravity
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.media3.common.ClippingConfiguration
 import androidx.media3.common.MediaItem
 import androidx.media3.transformer.Composition
 import androidx.media3.transformer.ExportException
@@ -90,13 +89,13 @@ class MainActivity : Activity() {
         val out = File(cacheDir, "trimmed.mp4")
         if (out.exists()) out.delete()
 
-        val clipping = ClippingConfiguration.Builder()
+        val clipping = MediaItem.ClippingProperties.Builder()
             .setStartPositionMs(0)
             .setEndPositionMs(5000)
             .build()
         val mediaItem = MediaItem.Builder()
             .setUri(uri)
-            .setClippingConfiguration(clipping)
+            .setClippingProperties(clipping)
             .build()
 
         val listener = object : Transformer.Listener {
